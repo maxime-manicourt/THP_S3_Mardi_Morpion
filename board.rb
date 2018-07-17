@@ -1,15 +1,14 @@
-
-load game.rb
-load player.rb
-load boardcases.rb
+load "game.rb"
+load "player.rb"
+load "boardcases.rb"
 
 class Board
   include Enumerable
-  #TO DO : la classe a 1 attr_accessor, une array qui contient les BoardCases
+  #on créé un tableau qui contient 3 x 3 cell 
     attr_reader :plateau
     
    def default_grid
-    array.new(3) { Array.new(3) { Cell.new } }
+    Array.new(3) { Array.new(3) { Cell.new } }
    end
 
     def initialize(input = {})
@@ -21,7 +20,7 @@ class Board
     end
 
       def play(x_or_o, position)
-      case_nb
+      case
       when position == "1"
       @board_positions[:one] = x_or_o
       when position == "2"
@@ -45,15 +44,3 @@ class Board
   def victory?
     #TO DO : qui gagne ?
   end
-<<<<<<< HEAD
-end
-  class Player
-    #TO DO : la classe a 2 attr_accessor, son nom, sa valeur (X ou O). Elle a un attr_writer : il a gagné ?
-
-
-    def initialize
-      #TO DO : doit régler son nom, sa valeur, son état de victoire
-    end
-=======
->>>>>>> d6559e7fad0fc670be3d9dbc96b760dcf14f73e5
-end
