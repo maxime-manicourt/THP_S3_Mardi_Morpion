@@ -19,7 +19,7 @@ class Game
 
   def turn
     #TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie
-
+    Board.to_s
   end
 
 end
