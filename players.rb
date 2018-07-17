@@ -1,5 +1,5 @@
-load 'board.rb'
-load 'game.rb'
+# load 'board.rb'
+require_relative 'game.rb'
 
 class Players
   # TO DO : la classe a 2 attr_accessor, son nom, sa valeur (X ou O).
