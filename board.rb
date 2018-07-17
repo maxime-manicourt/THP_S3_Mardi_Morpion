@@ -21,7 +21,7 @@ class Board
   def victory?
     #TO DO : qui gagne ?
   end
-
+end
   class Player
     #TO DO : la classe a 2 attr_accessor, son nom, sa valeur (X ou O). Elle a un attr_writer : il a gagné ?
 
@@ -29,3 +29,4 @@ class Board
     def initialize
       #TO DO : doit régler son nom, sa valeur, son état de victoire
     end
+end
