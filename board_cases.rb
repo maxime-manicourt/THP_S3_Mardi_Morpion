@@ -1,4 +1,4 @@
-Require players.rb 
+load "players.rb"
 
 class BoardCase
  attr_accessor :valeur , :case_nb
@@ -7,6 +7,13 @@ class BoardCase
   	valeur = @valeur  	
   	case_nb = @case_nb
   	 #TO DO doit régler sa valeur, ainsi que son numéro de case
+class BoardCase
+  #TO DO : la classe a 2 attr_accessor, sa valeur (X, O, ou vide), ainsi que son numéro de case)
+
+
+  def initialize
+    #TO DO doit régler sa valeur, ainsi que son numéro de case
+
   end
 
   def to_s

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+require "board.rb"
+require "board_cases.rb"
+require "player.rb"
+
+>>>>>>> ab5432d825acae5c36bf44e570278dc9faac43f0
 class Game
       def initialize
         #TO DO : créé 2 joueurs, créé un board

@@ -1,3 +1,4 @@
+
 load game.rb
 load player.rb
 load boardcases.rb
@@ -40,10 +41,8 @@ class Board
       when position == "9"
       @board_positions[:nine] = x_or_o
       end
-  end
 
   def victory?
     #TO DO : qui gagne ?
   end
-end 
- 
+end
