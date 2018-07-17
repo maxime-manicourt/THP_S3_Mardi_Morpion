@@ -27,7 +27,7 @@ class Board
       when position == "2"
       @board_positions[:two] = x_or_o
       when position == "3"
-       @board_positions[:three] = x_or_o
+      @board_positions[:three] = x_or_o
       when position == "4"
       @board_positions[:four] = x_or_o
       when position == "5"

@@ -1,23 +1,27 @@
-<<<<<<< HEAD
-=======
-require "board.rb"
-require "board_cases.rb"
-require "player.rb"
+load 'board.rb'
+load 'board_cases.rb'
+load 'players.rb'
 
->>>>>>> ab5432d825acae5c36bf44e570278dc9faac43f0
+# Classe qui lance le jeu
 class Game
-      def initialize
-        #TO DO : créé 2 joueurs, créé un board
-      end
+  def initialize
+    # TO DO : créé 2 joueurs, créé un board
+    # @plateau = Board.new
+    @joueur1 = Players.new("Tic", "O")
+    @joueur2 = Players.new("Tac", "X")
 
-      def go
-        # TO DO : lance la partie
-      end
+  end
 
-      def turn
-        #TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie
-      end
+  def go
+    # TO DO : lance la partie
+    puts "Hello #{@joueur1}"
+  end
 
-    end
+  def turn
+    #TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie
 
-    Game.new.go
+  end
+
+end
+Game.new.initialize
+Game.new.go
