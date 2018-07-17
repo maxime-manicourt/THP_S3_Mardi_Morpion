@@ -1,27 +1,32 @@
 
-load game.rb
-load player.rb
-load boardcases.rb
+load "game.rb"
+load "player.rb"
+load "boardcases.rb"
 
 class Board
   include Enumerable
-  #TO DO : la classe a 1 attr_accessor, une array qui contient les BoardCases
-    attr_reader :plateau
-    
+      attr_reader :plateau
+  #création du tableau qui contient 3 arrays qui contiennent chacune 3
+  #valeurs (chaque valeur se nomme Cell)  
    def default_grid
     array.new(3) { Array.new(3) { Cell.new } }
    end
 
-    def initialize(input = {})
+      def initialize(input = {})
       @grid = input.fetch(:plateau, default_grid)
-    end
+       end
   
-    def to_s
+        def to_s
+        #on imprime le plateau de jeu en séparant les cases de 3 lignes.
+        puts "\n"
+        @grid.each_slice(3) { |row| puts row.join(' | ') }
+        puts "\n"
+        end
    
-    end
-
       def play(x_or_o, position)
-      case_nb
+       #On créé une méthode qui permet d'afficher l'un ou l'autre des symbole selon le choix
+       #que les joueurs ont fait à l'aide des méthodes de la class "game" 
+      case
       when position == "1"
       @board_positions[:one] = x_or_o
       when position == "2"
@@ -43,6 +48,17 @@ class Board
       end
 
   def victory?
-    #TO DO : qui gagne ?
-  end
+    
+    # on définie les combinaisons gagnantes dans un hash
+    @winning_positions = [
+    #Horizontal
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    #Vertical
+    [0, 3, 6], [1, 4, 7],[2, 5, 8],
+    #Diagonale
+    [0, 4, 8], [2, 4, 6] 
+    ]
+    if @winning_positions.each do |num|
+    
+    end
 end
