@@ -1,9 +1,11 @@
+
 require_relative 'board.rb'
 require_relative 'board_cases.rb'
 require_relative 'players.rb'
 
 # Classe qui lance le jeu
 class Game
+
   def initialize
     @joueur1 = Players.new("name1", "O")
     @joueur2 = Players.new("name2", "X")
@@ -34,5 +36,13 @@ def move(player_name, symbol)
     puts "#{active_player.name} a gagné! Bravo."
 
   end
-end
-Game.new.initialize
+
+
+
+  def turn
+    #TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie
+    # Board.to_s
+  end
+    end
+
+

@@ -1,4 +1,8 @@
+
 require_relative 'board.rb'
+
+require_relative 'game.rb'
+
 
 class Players
   attr_accessor: :player :name 
